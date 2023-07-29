@@ -565,7 +565,7 @@ func (p *ProgressBar) Add64(num int64) error {
 	}
 
 	// always update if show bytes/second or its/second
-	if updateBar || p.config.showIterationsPerSecond || p.config.showIterationsCount {
+	if updateBar || p.config.showIterationsPerSecond || p.config.showIterationsCount || p.config.showBytes {
 		return p.render()
 	}
 
